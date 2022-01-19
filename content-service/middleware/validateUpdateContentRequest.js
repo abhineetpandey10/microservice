@@ -1,0 +1,31 @@
+//module imports
+const Error=require("../../utilities/classes/Error")
+const {error}=require("../../constants/constants");
+const handleError = require("../../utilities/functions/handleError");
+
+const validateUpdateContentRequest=(req, res, next)=>{
+
+    req.ok=true;
+
+    try
+    {
+        let contentID=req.body.contentID;
+        let title=req.body.title;
+        let story=req.body.story
+
+        if(contentID===null || contentID===undefined || title===null || title===undefined
+            || story===null || story===undefined)
+            throw new Error(error.REQUEST_VALIDATION_FAILED.Code, error.REQUEST_VALIDATION_FAILED.Message);
+        
+    }
+    catch(err)
+    {
+        handleError(req, err);
+    }
+    finally
+    {
+        next();
+    }
+}
+
+module.exports=validateUpdateContentRequest;

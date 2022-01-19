@@ -1,0 +1,1 @@
+cd ../../user-service && npm start

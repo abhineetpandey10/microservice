@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "b4195bee-5982-4271-bba7-4f984e7ecbb1",
+		"name": "user-interaction-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADD NEW USER READ INTERACTION FOR A CONTENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"rishabh@gmail.com\",\r\n    \"contentID\":\"V1Us559r3i9R0i8ivwfbktoxtG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/user_interaction/reads/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user_interaction",
+						"reads",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD NEW USER LIKE INTERACTION FOR A CONTENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"rishabh@gmail.com\",\r\n    \"contentID\":\"V1Us559r3i9R0i8ivwfbktoxtG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user_interaction/likes/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user_interaction",
+						"likes",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE A USER READ INTERACTION FOR A CONTENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"rishabh@gmail.com\",\r\n    \"contentID\":\"V1Us559r3i9R0i8ivwfbktoxtG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user_interaction/likes/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user_interaction",
+						"likes",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POPULATE USER INTERACTION DATABASE FROM CSV FILE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Users/Abhineet/Desktop/microservice/csv/user_interaction.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3003/user_interaction/data/ingest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user_interaction",
+						"data",
+						"ingest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH ALL USER READS OF A GIVEN CONTENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contentID\":\"b5b34b36b5b6nb356\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/user_interaction/reads/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user_interaction",
+						"reads",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH ALL USER LIKES OF A GIVEN CONTENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contentID\":\"b5b34b36b5b6nb356\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/user_interaction/reads/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user_interaction",
+						"reads",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

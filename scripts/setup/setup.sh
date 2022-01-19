@@ -1,0 +1,1 @@
+cd ../../content-service && npm install && cd ../user-service && npm install && cd ../user-interaction-service && npm install

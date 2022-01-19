@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "8ea6d7e2-07d7-4bfa-aa43-79eff4af1f0d",
+		"name": "content-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SERVCE NEW CONTENT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/content/serve/new",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"content",
+						"serve",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SERVE POPULAR CONTENT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/content/serve/popular",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"content",
+						"serve",
+						"popular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH  CONTENT DETAILS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/content/details?contentID=b5b34b36b5b6nb356",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"content",
+						"details"
+					],
+					"query": [
+						{
+							"key": "contentID",
+							"value": "b5b34b36b5b6nb356"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE CONTENT DETAILS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contentID\":\"b5b34b36b5b6nb356\",\r\n    \"title\":\"The Witcher\",\r\n    \"story\":\"When a humble bard graced a ride along-with Geral of Rivia-along came this song\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/content/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"content",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CONTENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contentID\":\"b5b34b36b5b6nb356\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/content/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"content",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE CONTENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"abhineetpandey10@gmail.com\",\r\n    \"title\":\"Gotham\",\r\n    \"story\":\"Jim! You father was the most honest man I ever knew, but he carried a knife\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/content/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"content",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POPULATE CONTENT DATABASE FROM CSV FILE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Users/Abhineet/Desktop/microservice/csv/content.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3002/content/data/ingest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"content",
+						"data",
+						"ingest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
